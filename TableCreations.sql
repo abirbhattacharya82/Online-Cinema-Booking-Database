@@ -1,14 +1,17 @@
+create database online_cinema_booking;
+use online_cinema_booking;
+
 create table customers(
   id INT AUTO_INCREMENT,
-  first_name VARCHAR NOT NULL,
-  last_name VARCHAR NOT NULL,
-  email VARCHAR NOT NULL,
+  first_name VARCHAR(120),
+  last_name VARCHAR(120) NOT NULL,
+  email VARCHAR(120) NOT NULL,
   PRIMARY KEY(id)
   );
 
 create table films(
   id INT AUTO_INCREMENT,
-  name VARCHAR NOT NULL,
+  name VARCHAR(45) NOT NULL,
   length_min INT NOT NULL,
   PRIMARY KEY (id)
   );
