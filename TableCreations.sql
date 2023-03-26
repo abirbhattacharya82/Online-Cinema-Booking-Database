@@ -1,5 +1,5 @@
 create table customers(
-  id Int,
+  id INT AUTO_INCREMENT,
   first_name VARCHAR NOT NULL,
   last_name VARCHAR NOT NULL,
   email VARCHAR NOT NULL,
@@ -7,21 +7,21 @@ create table customers(
   );
 
 create table films(
-  id INT,
+  id INT AUTO_INCREMENT,
   name VARCHAR NOT NULL,
   length_min INT NOT NULL,
   PRIMARY KEY (id)
   );
 
 create table rooms(
-  id INT,
+  id INT AUTO_INCREMENT,
   name VARCHAR(45) NOT NULL,
   no_seats INT NOT NULL,
   PRIMARY KEY (id)
   );
 
 create table screenings(
-  id INT,
+  id INT AUTO_INCREMENT,
   film_id INT NOT NULL,
   room_id INT NOT NULL,
   start_time DATETIME NOT NULL,
@@ -31,7 +31,7 @@ create table screenings(
   );
 
 create table seats (
-  id INT,
+  id INT AUTO_INCREMENT,
   row CHAR(1) NOT NULL,
   number INT NOT NULL,
   room_id INT NOT NULL,
@@ -40,7 +40,7 @@ create table seats (
   );
 
 create table bookings(
-  id INT,
+  id INT AUTO_INCREMENT,
   screening_id INT NOT NULL,
   customer_id INT NOT NULL,
   PRIMARY KEY (id),
@@ -49,7 +49,7 @@ create table bookings(
   );
 
 create table reserved_seats(
-  id INT,
+  id INT AUTO_INCREMENT,
   booking_id INT NOT NULL,
   seat_id INT NOT NULL,
   PRIMARY KEY (id),
